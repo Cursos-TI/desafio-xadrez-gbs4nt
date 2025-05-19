@@ -1,28 +1,72 @@
 #include <stdio.h>
 
+void movtorre(){
+    
+        for(int i=1;i<=5;i++){
+            printf("Direita\n");
+        }
+    }
+
+void movbispo(){
+    for(int i =1; i<=5; i++){
+        for(int j=1;j<=1;j++){
+        printf("Cima esquerda \n");
+        }
+    }
+
+}
+
+void movrainha(){
+    for(int i =1;i<=8;i++){
+        printf("Esquerda\n");
+    }
+}
+void movcavalo(){
+    for(int i =0;i<2; i++){
+        printf("Cima\n");
+         for(int j=0;j<1 && i==1;j++){
+        printf("Direita\n");
+        
+    } //o segundo for só vai ser executado quando i for = 1, caso o operador & não estivesse ali, a saída seria: Cima Direita Cima Direita.
+        
+    }
+   
+}
+
+
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
 
-    int movbispo=1;
-    int movrainha =1;
+    printf("TORRE: \n");
+
+    movtorre();
+    printf("\n");
+
+    printf("BISPO: \n");
+    movbispo();
+    printf("\n");
+
+    printf("RAINHA: \n");
+    movrainha();
+    printf("\n");
+
+    printf("CAVALO: \n");
+    movcavalo();
+
+ 
     
-    for(int movtorre =1;movtorre<=5;movtorre++){
-        printf("Direita\n");
-    }
-
-    do{
-       printf("Cima Esquerda\n");
-       movbispo++;
-    }while(movbispo<=5);
 
 
-    while(movrainha<=8){
-        printf("Esquerda\n");
-        movrainha++;
-    }
+
+
+
+
+
+
+
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
